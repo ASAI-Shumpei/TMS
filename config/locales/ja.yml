@@ -1,0 +1,13 @@
+ja:
+  task:
+    status:
+      pending: "未着手"
+      in_progress: "対応中"
+      completed: "完了"
+      archived: "アーカイブ済み"
+
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%m/%d %H:%M"
+      long: "%Y年%m月%d日(%a) %H:%M"

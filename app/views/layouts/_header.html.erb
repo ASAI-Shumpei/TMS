@@ -1,0 +1,14 @@
+<header class="main-header">
+  <div class="header-container">
+    <div class="header-site-title">
+      <%= link_to root_path, class: "header-title-link" do %>
+        <%= image_tag "tasRogo.png", alt: "タスク管理アプリのロゴ", class: "header-logo" %>
+        <h1>タスク管理アプリ</h1>
+      <% end %>
+    </div>
+    <nav class="header-nav">
+      <%= link_to "タスク一覧", tasks_path, class: "header-nav-link" %>
+      <%= link_to "新規タスク登録", new_task_path, class: "header-nav-link" %>
+    </nav>
+  </div>
+</header>

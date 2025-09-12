@@ -2,12 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import HelloWorld from './components/Helloworld'; 
+import RealTimer from './Realtimer'; 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const rootElement = document.getElementById('react-root');
-  if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement);
-    root.render(<HelloWorld />);
+  const RT = document.getElementById('timerRoot');
+  if (RT) {
+    const root = ReactDOM.createRoot(RT);
+    root.render(<RealTimer />);
   }
 });

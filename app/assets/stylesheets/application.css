@@ -1,10 +1,188 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* テキストも中央揃えにする */
+  padding: 20px;
+}
+
+
+/* カードのコンテナスタイル */
+.task-cards-container {
+  display: flex; /* 子要素をFlexアイテムとして配置 */
+  flex-wrap: wrap; /* 子要素がはみ出した場合に折り返す */
+  gap: 16px; /* 子要素間の隙間を設定 */
+  
+  margin-top: 20px;
+}
+
+/* タスクのカードスタイル */
+.task-card {
+  flex: 1 1 calc(33.33% - 16px);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* マウスオーバー時のスタイル */
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* リンクをブロック要素に変更 */
+.task-card a {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.page-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* 共通のボタン基本スタイル */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ボタン風リンクのスタイル */
+.button-link {
+  /* 共通のスタイルは削除 */
+  background-color: transparent;
+  color: #3490dc;
+  border: 1px solid #3490dc;
+}
+
+/* ホバー時のスタイル */
+.button-link:hover {
+  background-color: #3490dc;
+  color: #fff;
+}
+
+/* フォームの送信ボタン用スタイル */
+.button-submit {
+  /* 共通のスタイルは削除 */
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+}
+
+/* ホバー時のスタイル */
+.button-submit:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* フォーム全体のコンテナ */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 1列目は1fr（ラベル）、2列目は3fr（入力欄） */
+  gap: 1rem 2rem; /* 行と列の間隔 */
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* フォームのグループスタイル */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+/* ラベルのスタイル */
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* 入力フィールドのスタイル */
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* アクションボタンのコンテナスタイル */
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+/*---*/
+/* ヘッダーのスタイル */
+.main-header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-site-title {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  height: 100px; /* ここを調整 */
+  margin-right: 10px;
+}
+
+.header-site-title h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* リンクのスタイルを個別に定義 */
+.header-title-link,
+.header-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.header-title-link:hover,
+.header-nav-link:hover {
+  opacity: 0.8;
+}

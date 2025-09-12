@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @task %>
+
+<div style="text-align: center; margin-top: 20px;">
+  <%= link_to "タスク編集", edit_task_path(@task) , class: "button button-link"%> 
+  <%= link_to "タスク一覧に戻る", tasks_path , class: "button button-link"%> 
+  <%= link_to "このタスクを破棄", @task, method: :delete ,data: { confirm: "本当に削除しますか？" }, class: "button button-link" %>
+</div>
