@@ -1,12 +1,12 @@
-<% content_for :title, "Editing task" %>
+<% content_for :title, "タスク更新" %>
 
-<h1>Editing task</h1>
+<h1>タスク更新</h1>
 
 <%= render "form", task: @task %>
 
 <br>
 
-<div>
-  <%= link_to "Show this task", @task %> |
-  <%= link_to "Back to tasks", tasks_path %>
+<div style="text-align: center; margin-top: 20px;">
+  <%= link_to "タスク詳細に戻る", @task , class: "button button-link"%> 
+  <%= link_to "タスク一覧に戻る", tasks_path , class: "button button-link"%>
 </div>

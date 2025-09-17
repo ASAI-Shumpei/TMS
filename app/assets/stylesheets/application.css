@@ -59,13 +59,12 @@
 
 /* ボタン風リンクのスタイル */
 .button-link {
-  /* 共通のスタイルは削除 */
   background-color: transparent;
   color: #3490dc;
   border: 1px solid #3490dc;
 }
 
-/* ホバー時のスタイル */
+
 .button-link:hover {
   background-color: #3490dc;
   color: #fff;
@@ -73,17 +72,25 @@
 
 /* フォームの送信ボタン用スタイル */
 .button-submit {
-  /* 共通のスタイルは削除 */
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
+  background-color: transparent;
+  color:#4CAF50;  
+  border: 1px solid #4CAF50;
 }
 
-/* ホバー時のスタイル */
 .button-submit:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #45a050;
+  color: #fff;
+}
+
+.button-delete {
+  background-color: transparent;
+  color: #d61ad6;
+  border: 1px solid #d61ad6;
+}
+
+.button-delete:hover {
+  background-color: #d61ad6;
+  color: #fff;
 }
 
 

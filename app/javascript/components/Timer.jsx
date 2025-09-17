@@ -32,9 +32,11 @@ const Timer = ({ dueDate }) => {
 
   
   const formatTime = (seconds) => {
+    
     if (seconds <= 0) {
       return '期限切れ';
     }
+    
     const days = Math.floor(seconds / (3600 * 24));
     const hours = Math.floor((seconds % (3600 * 24)) / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
