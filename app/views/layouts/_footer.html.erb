@@ -1,0 +1,15 @@
+<footer class="main-footer">
+  <div class="footer-content">
+    <p>&copy; <%= Time.current.year %> TasTas. All rights reserved.</p>
+    <div class="footer-links">
+      <%= link_to "プライバシーポリシー", "/PPolicy.pdf", target: "_blank" %>
+      <%= link_to "利用規約", "/terms-of-service.pdf", target: "_blank" %>
+      <%= link_to "タスタスについて", "https://g.co/gemini/share/6233614a6d14", target: "_blank" %>
+    </div>
+    <p class="version">Version 1.0.2</p>
+    <%# マスコットをフッターにも配置するなら %>
+    <%# <div class="mascot-info"> %>
+    <%#   TasTas公式マスコットのタスケルベロス！ %>
+    <%# </div> %>
+  </div>
+</footer>
